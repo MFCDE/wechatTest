@@ -1,0 +1,18 @@
+<template name="movieTemplate">
+    <!--这里注意相对路径是相对于movie，模版文件是引入movie页面了-->
+    <navigator url="/pages/movie/movie-detail/movie-detail?id={{id}}">
+        <view class="item">
+            <image class="poster" src="{{images.large}}"></image>
+            <view class="meta">
+                <text class="title">{{title}}</text>
+                <text class="sub-title">{{original_title}}({{year}})</text>
+                <text class="artists">
+                    <text wx:for="{{directors}}" wx:key wx:for-item="item">{{item.name}}</text>
+                </text>
+            </view>
+            <view class="rating">
+                <text>{{rating.average}}</text>
+            </view>
+        </view>
+    </navigator>
+</template>
