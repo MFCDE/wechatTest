@@ -1,0 +1,23 @@
+.scroll-view-container{
+     width: 300rpx;
+     height: 500rpx;
+ }
+
+.a,
+.b,
+.c{
+    width:500rpx;
+    height: 300rpx;
+}
+
+.a{
+    background-color: red;
+}
+
+.b{
+    background-color: blue;
+}
+
+.c{
+    background-color: yellow;
+}

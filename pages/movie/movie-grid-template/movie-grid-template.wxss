@@ -1,0 +1,7 @@
+@import "../movie-template/movie-template.wxss";
+
+.page-body{
+    display: flex;
+    flex-direction: column;
+    /*flex:1;*/
+}

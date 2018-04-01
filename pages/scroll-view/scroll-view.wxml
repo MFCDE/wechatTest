@@ -1,0 +1,8 @@
+<scroll-view class="scroll-view-container" scroll-y="true" scroll-x="true"
+             bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower"
+             upper-threshold="100" lower-threshold="100" data-sc="123" scroll-into-view="{{intoView}}" bindscroll="scroll">
+    <view id="a" class="a"></view>
+    <view id="b" class="b"></view>
+    <view id="c" class="c"></view>
+</scroll-view>
+<button class="" bindtap="onButton">点击切换</button>

@@ -1,0 +1,58 @@
+<view class="page">
+    <view class="page_hd">
+        <text class="page_title">form</text>
+        <view class="page_hr"></view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section">
+            <view class="section_title">switch</view>
+            <!--这里注意"false"是看做一个字符串，还是为真，空值为假，没有checked属性的话默认为假，数据绑定{{false}}为假-->
+            <switch name="switch" type="switch" checked="{{false}}" color="red" bindchange="onBindSwitchChange"/>
+        </view>
+        <view class="section">
+            <view class="section_title">slider</view>
+            <!--step步长默认为1，步长要被长度整除-->
+            <slider name="slider" show-value="true" step="1" min="0" max="500" bindchange="onBindSliderChange"/>
+        </view>
+        <view class="section">
+            <view class="section_title">raido</view>
+            <radio-group class="radio-group" name="radio1"  bindchange="onBindRadioChange">
+                <!--只能有一个radio选中，如果都把checked设置为true，则最后一个为选中状态-->
+                <label>
+                    <radio value="1" checked="true"/>
+                    战士
+                </label>
+                <label>
+                    <radio value="2" checked="true"/>
+                    法师
+                </label>
+                <label>
+                    <radio value="3" checked="true"/>
+                    牧师
+                </label>
+            </radio-group>
+        </view>
+        <view class="section">
+            <radio-group class="radio-group" name="radio2" bindchange="onBindRadioChange">
+                <!--注意undefined也是false-->
+                <label wx:for="{{radio}}" wx:key wx:for-item="item">
+                    <radio value="{{item.value}}" checked="{{item.checked}}"/>
+                    {{item.name}}
+                </label>
+            </radio-group>
+        </view>
+        <view class="section">
+            <checkbox-group name="checkbox" bindchange="onBindCheckBoxChange">
+                <!--注意undefined也是false-->
+                <label wx:for="{{radio}}" wx:key wx:for-item="item">
+                    <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
+                    {{item.name}}
+                </label>
+            </checkbox-group>
+        </view>
+        <view class="section">
+            <button formType="submit">提交</button>
+            <button formType="reset">重置</button>
+        </view>
+    </form>
+</view>
